@@ -5,7 +5,7 @@ postgres:
 	docker compose up edgedb-postgres --wait
 
 edgedb:
-	docker compose up --detach edgedb --wait
+	docker compose up edgedb --wait
 
 setup:
 	psql --dbname=postgres --username=postgres --host=localhost --port=5432 --file=setup.sql
