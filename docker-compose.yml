@@ -1,8 +1,6 @@
-version: '2.4'
-
 services:
   edgedb-postgres:
-    image: postgres:15.2
+    image: postgres:16
     container_name: edgedb-postgres
     ports: [ '5432:5432' ]
     healthcheck:
@@ -17,7 +15,7 @@ services:
       POSTGRES_DB: postgres
 
   edgedb:
-    image: edgedb/edgedb:3.2
+    image: edgedb/edgedb:5.6
     container_name: edgedb
     ports: [ '5656:5656' ]
     healthcheck:
